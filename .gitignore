@@ -1,0 +1,68 @@
+############################
+# Java / Maven
+############################
+target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# JaCoCo / Surefire reports
+jacoco.exec
+jacoco.xml
+target/site/
+target/surefire-reports/
+target/failsafe-reports/
+
+############################
+# Python (MCP server)
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+############################
+# IDE / Editor
+############################
+.idea/
+*.iml
+.vscode/
+.metals/
+.bsp/
+
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Logs / temp / swap
+############################
+*.swp
+*.swo
+*.tmp
+*.bak
+
+############################
+# Node (VS Code MCP runtime)
+############################
+node_modules/
+
+############################
+# Coverage / test artifacts
+############################
+coverage/
+*.coverage
