@@ -254,7 +254,7 @@ Key insight: **coverage feedback is sufficient to guide iterative test generatio
 
 ## Author
 
-Dan
+Daniel Carbajal
 SE333 — Software Testing & Quality Assurance
 DePaul University
 
