@@ -70,12 +70,12 @@ Each agent iteration performs:
 ## Repository Structure
 
 ```
-SE-Final/                # MCP server workspace
+MCP Server/                # MCP server workspace
   main.py -> mcp server
   pyproject.toml
   uv.lock
 
-se333-Demo/              # Agent + Java app workspace
+Agent Workspace (se333-Demo)/              # Agent + Java app workspace
   src/main/java/
   src/test/java/
   pom.xml
@@ -100,7 +100,7 @@ se333-Demo/              # Agent + Java app workspace
 ## MCP Server Setup
 
 ```bash
-cd SE-Final
+cd MCP Server
 uv sync
 uv run server.py
 ```
@@ -131,7 +131,7 @@ Enable **YOLO / Auto‑Approve** mode for tool execution.
 ## Java Project Setup
 
 ```bash
-cd se333-Demo
+cd Agent Workspace (se333-Demo)
 mvn clean test
 ```
 
