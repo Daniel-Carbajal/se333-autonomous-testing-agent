@@ -4,7 +4,7 @@ description: "You are an expert software tester. Your task is to generate compre
 model: "GPT-5 mini" 
 ---
 ## Repository ##
-https://github.com/Daniel-Carbajal/se333-Demo.git
+https://github.com/Daniel-Carbajal/se333-autonomous-testing-agent.git
 
 ## Trunk Based Branching Model ##
 Iteration N lifecycle:
