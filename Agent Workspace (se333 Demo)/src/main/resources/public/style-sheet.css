@@ -1,0 +1,89 @@
+html {
+  background-color: white;
+}
+
+table{
+    border: 1px solid black;
+    font-family: arial;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr{
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+    color: blue;
+    border: 5px solid black;
+    border-radius: 250px;
+    background-color: lightblue;
+    width: 250px;
+    margin: auto;
+}
+
+.bottom-left-element {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.dashboard-container{
+    display:flex;
+    gap: 10px;
+    align-items: start;
+}
+
+.wallet-container{
+    background-image: url('/images/wallet_background.jpg');
+    background-size: cover;
+
+    border: 5px solid black;
+    border-radius: 20px;
+
+    width: 300px;
+    margin: 15px auto auto auto;
+    color: white;
+    float: left;
+}
+
+#place-order-section {
+    border: 5px solid black;
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 0 20px 20px 20px;
+    width: 250px;
+    margin: 15px auto auto auto;
+}
+
+#current-market {
+    background-color: lightblue;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 700px;
+    padding: 0 10px 10px 10px;
+    margin: 15px auto auto auto;
+}
+
+#account-balance {
+    border-radius: 20px;
+    padding: 0 20px 20px 20px;
+    width: 250px;
+    margin: 15px auto auto auto;
+}
+
+#wallet-buttons{
+    border-top: 5px solid black;
+    border-radius: 0 0 15px 15px;
+    background-color: lightgrey;
+    padding: 10px;
+    color: black;
+}
