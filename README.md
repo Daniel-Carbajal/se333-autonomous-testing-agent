@@ -196,39 +196,39 @@ Selection source: `jacoco_parser` MCP tool output.
 
 # Technical Documentation
 ## MCP Tool API Reference
-*jacoco_parser(xml_path)*
+### jacoco_parser(xml_path)
 Parses the JaCoCo XML coverage report and extracts coverage statistics
 
 <strong>Input:</strong>
-'''
+```
 xml_path: string
-'''
+```
 Path to the JaCoCo XML file (typically in target/site/jacoco/jacoco.xml)
 
 <strong>Output:</strong>
 Returns structured coverage data including:
-'''
+```
 {
   packages: [...],
   classes: [...],
   methods: [...],
   methods_needing_coverage: [...]
 }
-'''
+```
 Used For identifying uncovered methods, targeting test generation, and prioritizing coverage improvements.
 
-*scan_maven_vulnerabilities(pom_path)*
+### scan_maven_vulnerabilities(pom_path)
 Performs dependency vulnerabilities scanning using the OSV database.
 
 <strong>Input:</strong>
-'''
+```
 pom_path: string
-'''
+```
 Path to the Maven **pom.xml** file.
 
 <strong>Output:</strong>
 Returns detected vulnerabilities including:
-'''
+```
 {
   dependency: "...",
   version: "...",
@@ -236,22 +236,22 @@ Returns detected vulnerabilities including:
   severity: "...",
   description: "..."
 }
-'''
+```
 Used for security pre-check before test generation, identifying risky dependencies, and demonstrating security-aware autonomous tooling.
 
-*add(a, b)*
+### add(a, b)
 Example MCP connectivity tool.
 
 <strong>Input:</strong>
-'''
+```
 a: number
 b: number
-'''
+```
 
 <strong>Output:</strong>
-'''
+```
 sum = a + b
-'''
+```
 Used for Phase-1 MCP connectivity test and ensured that the MCP server and agent could communicate before other MCP tools were available.
 
 ---
@@ -265,32 +265,32 @@ Decision priorities include:
 3. Controller endpoints
 4. Service logic
 5. Edge cases and null handling
-The agent uses the following feedback signals:
-- Low Coverage            -> Generate new tests
-- Failing Tests           -> Inspect code and apply fix
-- New Branches discovered -> Generate additional tests
-- Security Issue          -> Flag and fix dependency
+    The agent uses the following feedback signals:
+    - Low Coverage            -> Generate new tests
+    - Failing Tests           -> Inspect code and apply fix
+    - New Branches discovered -> Generate additional tests
+    - Security Issue          -> Flag and fix dependency
 
 ---
 
 ## Reproducing an Iteration
 To reproduce the results shown in the project:
 1. Start the MCP server
-'''
+```
 cd MCP Server
 uv sync
 uv run main.py
-'''
+```
 2. Build Java Project
-'''
+```
 cd Agent Workspace (se333-Demo)
 mvn clean test
-'''
+```
 3. Run the Agent
 Execute the prompt from VsCode chat window:
-'''
+```
 .github/prompts/tester.prompt.md
-'''
+```
 Observe the following process:
 1. Test execution
 2. Coverage parsing
