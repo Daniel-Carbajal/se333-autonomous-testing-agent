@@ -40,6 +40,7 @@ Iteration N lifecycle:
    - Any codebase bugs found/fixed
 
 ## Security Pre-Check
+Do this before each iteration to ensure dependencies are secure before testing in case any were changed in the last iteration. This is a critical step to maintain security hygiene.
 Call the MCP tool: `se333-mcp-server/scan_maven_vulnerabilities` on pom.xml (for input, pom_path is str or array).
 
 If vulnerabilities are found:
@@ -47,6 +48,11 @@ If vulnerabilities are found:
 - Run `mvn test` to verify the build.
 - Create a PR titled: "fix: upgrade vulnerable dependencies".
 - Merge the PR if tests pass.
+- Log the vulnerability details and fixes in 'coverage_log.md' under a new section for that iteration. Call the section "Security Vulnerabilities Found and Fixed" and include:
+  - Dependency name
+  - Vulnerability description
+  - Fixed version
+  - Any relevant CVE identifiers
 
 If no vulnerabilities are found:
 - Proceed to the testing workflow.
