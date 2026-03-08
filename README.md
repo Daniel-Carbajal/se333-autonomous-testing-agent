@@ -40,10 +40,8 @@ Key file:
 ```
 .github/prompts/tester.prompt.md
 ```
-
-Defines:
-
-* Model + MCP tools
+This prompt defines the autonomous behavior of the testing agent including tool:
+* Model + MCP tools and usage
 * Iterative testing workflow
 * Git automation rules
 * Coverage‑driven decision logic
@@ -287,7 +285,7 @@ cd Agent Workspace (se333-Demo)
 mvn clean test
 ```
 3. Run the Agent
-Execute the prompt from VsCode chat window:
+Execute the prompt from VS Code chat window:
 ```
 .github/prompts/tester.prompt.md
 ```
@@ -317,14 +315,14 @@ The system achieves:
 ## Troubleshooting Common Issues
 ### MCP tools not appearing in VS Code
 Check that:
-- MCP sever is still running
+- MCP server is still running
 - URL matches config
-- SSE enpoint is reachable
+- SSE endpoint is reachable
 '''
 http://127.0.0.1:8000/sse
 '''
 ### JaCoCo XML not found
-Ensure tests were run successfull:
+Ensure tests were run successfully:
 '''
 mvn clean test
 '''
