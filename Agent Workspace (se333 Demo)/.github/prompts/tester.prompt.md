@@ -111,16 +111,16 @@ Never reorder steps.
    - Cover normal 
    - Prefer adding tests over modifying production code.
 6. Bug Policy
-   - If tests reveal a bug, fix it in the same iteration before merging, document it in PR.
+   - If tests reveal a bug, fix it in the same iteration before merging, document it in PR and coverage_log.md clearly and concisely including line numbers/location of code change.
 7. Coverage Objective
    - Goal: Progressively improve coverage towards 100% over iterations.
    - Do NOT loop endlessly on unreachable coverage targets. Focus on high impact areas.
 8. Iteration Continuity:
    Each iteration must:
-   read jacoco.xml
+   - read jacoco.xml
    - select top uncovered targets
    - add tests
-   - update coverage_log.md
+   - append to coverage_log.md
    - create PR
 
 ## Key Behavioral Priorities ##
