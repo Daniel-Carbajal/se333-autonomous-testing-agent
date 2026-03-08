@@ -39,3 +39,49 @@ None - all tests passed on first run. The Price class implementation is robust.
 - Build status: SUCCESS
 
 ---
+
+## Iteration 2
+
+**Date:** March 8, 2026
+
+### Targets Selected
+- **Service/EncryptionService** (Priority: HIGH - Security Critical)
+  - Initial coverage: 0% (0/3 lines covered)
+  - Critical password hashing and verification functionality
+- **Model/user/Wallet** (Priority: HIGH - Business Logic)
+  - Initial coverage: 0% (0/16 lines covered)
+  - Money management with validation logic
+
+### Tests Added/Modified
+- **Created:** `src/test/java/Service/EncryptionServiceTest.java`
+  - 14 comprehensive test methods covering:
+    - `hashPassword()` - 7 tests (basic, empty, special chars, long strings, uniqueness)
+    - `verifyPassword()` - 6 tests (correct, incorrect, case-sensitive, special chars, whitespace)
+    - Integration test - multiple password scenarios
+    - Constructor instantiation test
+
+- **Created:** `src/test/java/Model/user/WalletTest.java`
+  - 17 comprehensive test methods covering:
+    - Constructor - 2 tests (valid price, zero price)
+    - `getWalletValue()` - 1 test
+    - `addMoney()` - 5 tests (positive, multiple adds, zero/negative validation)
+    - `subtractMoney()` - 7 tests (valid, multiple subtracts, exact amount, zero/negative validation, insufficient funds)
+    - Integration tests - 2 tests (add/subtract combos, large amounts)
+
+### Coverage Improvement
+- **EncryptionService:** 0% → **100%** (+100%)
+  - Lines covered: 0 → 3 (+3 lines)
+  - All 2 static methods + constructor fully covered
+- **Wallet:** 0% → **100%** (+100%)
+  - Lines covered: 0 → 16 (+16 lines)
+  - All 4 methods fully covered with validation and edge cases
+
+### Codebase Bugs Found/Fixed
+None - all tests passed. Both classes have robust error handling and validation.
+
+### Test Results
+- Total tests: 74 (43 Price + 17 Wallet + 14 EncryptionService)
+- ✅ All tests passed
+- Build status: SUCCESS
+
+---
