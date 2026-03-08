@@ -40,6 +40,53 @@ None - all tests passed on first run. The Price class implementation is robust.
 
 ---
 
+## Iteration 3
+
+**Date:** March 8, 2026
+
+### Targets Selected
+- **Model/user/User** (Priority: HIGH - Core Domain Model)
+  - Initial coverage: 0% (0/45 lines covered)
+  - User management with wallet integration, tradable tracking, and current market updates
+
+### Tests Added/Modified
+- **Created:** `src/test/java/Model/user/UserTest.java`
+  - 31 comprehensive test methods covering:
+    - Constructor validation - 6 tests (valid userId, trimming, min length, empty/null validation, initialization of collections)
+    - `getUserId()` - 1 test
+    - Wallet operations - 8 tests:
+      - `addToWallet()` - 3 tests (valid amount, multiple adds, invalid amount rejection)
+      - `subtractFromWallet()` - 3 tests (valid amount, multiple subtracts, insufficient funds)
+      - `getWalletBalance()` - 2 tests (initial zero, after transactions)
+    - Defensive copying - 4 tests:
+      - `getUserMap()` - 2 tests (initially empty, returns defensive copy)
+      - `getCurrentMarkets()` - 2 tests (initially empty, returns defensive copy)
+    - `updateTradable()` - 3 tests (valid DTO add, replacement of existing, null handling)
+    - `updateCurrentMarket()` - 4 tests (single market, multiple symbols, market replacement, retrieval)
+    - `getCurrentMarketsString()` - 3 tests (empty markets, single market, multiple markets)
+    - `toString()` - 2 tests (basic format, with special characters)
+    - Integration tests - 2 tests (complex scenarios with wallet + tradables + markets, balance calculation)
+
+### Coverage Improvement
+- **User class:** 0% → **100%** (+100%)
+  - Lines covered: 0 → 45 (+45 lines)
+  - All 9 methods fully covered (constructor, getters, wallet operations, tradable management, current market tracking)
+
+### Codebase Bugs Found/Fixed
+None - all tests passed. The User class properly integrates Wallet functionality and maintains defensive copying for collections.
+
+### Test Results
+- Total tests: 105 (43 Price + 17 Wallet + 14 EncryptionService + 31 User)
+- ✅ All tests passed
+- Build status: SUCCESS
+
+### Technical Notes
+- Fixed compilation errors by adding `InvalidVolumeException` to test method signatures
+- Added import for `Model.currentMarket.InvalidVolumeException`
+- `CurrentMarketSide` constructor throws checked exception that needed proper handling
+
+---
+
 ## Iteration 2
 
 **Date:** March 8, 2026
