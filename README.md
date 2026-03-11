@@ -309,6 +309,9 @@ The system achieves:
 * Autonomous bug detection and repair
 * Reproducible MCP‑driven workflow
 * Git‑auditable evolution
+* Maven dependency vulnerability pre-checks
+
+See coverage improvement <a href"https://github.com/Daniel-Carbajal/se333-autonomous-testing-agent/blob/main/Agent%20Workspace%20(se333%20Demo)/coverage_log.md">here!</a>
 
 ---
 
