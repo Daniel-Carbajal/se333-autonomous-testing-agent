@@ -356,7 +356,7 @@ This project demonstrates how MCP enables:
 
 Key insight: **coverage feedback is sufficient to guide iterative test generation without human prompts.**
 
-In depth reflection in 'report/SE333 Final Reflection.pdf'
+In depth reflection in <a href="https://github.com/Daniel-Carbajal/se333-autonomous-testing-agent/blob/main/report/SE333%20Final%20Reflection.pdf">'report/SE333 Final Reflection.pdf'</a>
 
 ### Limitations
 Currently I think the LLM-generated tests still require human review occasionally. Also not all coverage metrics will always reflect behavioral correctness for tests.
