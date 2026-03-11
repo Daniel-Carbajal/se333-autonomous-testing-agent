@@ -354,12 +354,13 @@ This project demonstrates how MCP enables:
 * Autonomous software and security maintenance
 * Integration of testing + DevOps
 
-Key insight: **coverage feedback is sufficient to guide iterative test generation without human prompts.**
+Key insight: Coverage feedback seems sufficient to guide iterative test generation without human prompts. I still think it is important to review before making a pull request to merge, so one of the best things I implemented to allow human review at this stage, as well as prevent the LLM from using outside tools, were stop conditions in the prompt.
 
 In depth reflection in <a href="https://github.com/Daniel-Carbajal/se333-autonomous-testing-agent/blob/main/report/SE333%20Final%20Reflection.pdf">'report/SE333 Final Reflection.pdf'</a>
 
-### Limitations
-Currently I think the LLM-generated tests still require human review occasionally. Also not all coverage metrics will always reflect behavioral correctness for tests.
+### Limitations and Challenges
+Currently I think the LLM-generated tests still require human review occasionally, especially before putting it into production. Also not all coverage metrics will always reflect behavioral correctness for tests.
+The LLM sometimes likes to "do its own thing." In its trajectory it may try using outside tools or creating its own which needs to be prompted. 
 
 ### Future Work
 Some future improvements that I think would be practical:
